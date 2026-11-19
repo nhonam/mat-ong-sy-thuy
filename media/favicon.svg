@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mật ong Sỹ Thủy">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D3527"/>
+      <stop offset="1" stop-color="#0F1913"/>
+    </linearGradient>
+    <linearGradient id="honey" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2C978"/>
+      <stop offset="1" stop-color="#E3A03C"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#tile)"/>
+  <path d="M32 7.5 52.4 19.25v23.5L32 54.5 11.6 42.75v-23.5L32 7.5Z" fill="url(#honey)"/>
+  <path d="M32 19 42.4 25v12L32 43 21.6 37V25L32 19Z" fill="#0F1913"/>
+</svg>
