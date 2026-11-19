@@ -1,0 +1,1719 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mật ong Thủy Sỹ</title>
+<meta name="description" content="Mật ong nhà nuôi Hương Sơn, Hà Tĩnh. Quay ly tâm, rót nguyên chất. Đặt hàng qua điện thoại hoặc Facebook Messenger.">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@1,400;1,500&display=swap");
+
+/* ============================================================
+   MẬT ONG THỦY SỸ — đơn hướng thiết kế:
+   lưới chặt, đường kẻ mảnh, chữ cỡ lớn,
+   nền giấy ấm + dải xanh đồi, điểm nhấn mật ong.
+   ============================================================ */
+:root{
+  /* màu — nền sáng */
+  --bg:#F2EFE5;
+  --bg-alt:#E9E4D6;
+  --surface:#FBF8F0;
+  --fg:#121A16;
+  --fg-muted:#55605A;
+  --fg-faint:#7F8880;
+  --line:#D6CEBB;
+  --honey:#E3A03C;
+  --honey-soft:#F2C978;
+  --honey-ink:#8A5410;
+  --leaf:#21402F;
+  --on-honey:#191204;
+  --hero-bg:#0F1913;
+  --hero-bg-2:#16241C;
+  --hero-fg:#F4F0E3;
+  --hero-muted:#A7B4A8;
+  --hero-line:rgba(244,240,227,.16);
+  --nav-solid:rgba(242,239,229,.9);
+  --shadow:0 30px 70px -42px rgba(18,26,22,.5);
+  --ph-line:rgba(85,96,90,.28);
+
+  /* kiểu chữ — 4 vai trò */
+  --f-display:"Archivo","Be Vietnam Pro","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --f-serif:"Lora",Georgia,"Times New Roman",serif;
+
+  --wrap:1240px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1310;
+    --bg-alt:#121B16;
+    --surface:#18231D;
+    --fg:#F2EEE2;
+    --fg-muted:#A0AC9F;
+    --fg-faint:#7D887C;
+    --line:#29372E;
+    --honey:#F0B455;
+    --honey-soft:#FFD48A;
+    --honey-ink:#F3B75B;
+    --leaf:#8FC5A6;
+    --on-honey:#191204;
+    --hero-bg:#070E0A;
+    --hero-bg-2:#0E1813;
+    --hero-fg:#F4F0E3;
+    --hero-muted:#9DAB9F;
+    --hero-line:rgba(244,240,227,.14);
+    --nav-solid:rgba(12,19,16,.9);
+    --shadow:0 30px 70px -42px rgba(0,0,0,.85);
+    --ph-line:rgba(244,240,227,.2);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1310;
+  --bg-alt:#121B16;
+  --surface:#18231D;
+  --fg:#F2EEE2;
+  --fg-muted:#A0AC9F;
+  --fg-faint:#7D887C;
+  --line:#29372E;
+  --honey:#F0B455;
+  --honey-soft:#FFD48A;
+  --honey-ink:#F3B75B;
+  --leaf:#8FC5A6;
+  --on-honey:#191204;
+  --hero-bg:#070E0A;
+  --hero-bg-2:#0E1813;
+  --hero-fg:#F4F0E3;
+  --hero-muted:#9DAB9F;
+  --hero-line:rgba(244,240,227,.14);
+  --nav-solid:rgba(12,19,16,.9);
+  --shadow:0 30px 70px -42px rgba(0,0,0,.85);
+  --ph-line:rgba(244,240,227,.2);
+  color-scheme:dark;
+}
+
+/* ---------- nền tảng ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+main{display:block}
+h1,h2,h3,h4,p,figure,blockquote,dl,dd,dt{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+img,svg,video{display:block;max-width:100%}
+[hidden]{display:none!important}
+::selection{background:var(--honey);color:var(--on-honey)}
+:focus-visible{outline:2px solid var(--honey);outline-offset:3px}
+
+.wrap{
+  width:100%;
+  max-width:var(--wrap);
+  margin-inline:auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
+.band{padding-block:clamp(70px,9.5vw,124px)}
+.band--paper{background:var(--bg)}
+.band--alt{background:var(--bg-alt)}
+.band--tight{padding-block:clamp(56px,7vw,92px)}
+.band--dark{
+  background:
+    radial-gradient(900px 420px at 85% 0%, rgba(240,180,85,.14), transparent 62%),
+    linear-gradient(180deg,var(--hero-bg),var(--hero-bg-2));
+  color:var(--hero-fg);
+}
+.band--honey{background:var(--honey);color:var(--on-honey)}
+
+/* ---------- kiểu chữ dùng chung ---------- */
+.eyebrow{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--f-mono);
+  font-size:.7rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--fg-muted);
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--honey);flex:none}
+.h2{
+  font-family:var(--f-display);
+  font-weight:800;
+  font-size:clamp(2rem,4.6vw,3.5rem);
+  line-height:1.08;
+  letter-spacing:-.028em;
+  text-wrap:balance;
+}
+.lede{
+  font-size:clamp(1.02rem,1.35vw,1.16rem);
+  line-height:1.7;
+  color:var(--fg-muted);
+  max-width:58ch;
+}
+.mono{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+
+/* ---------- nút ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:50px;
+  padding:13px 22px;
+  border:1px solid transparent;
+  border-radius:2px;
+  font-family:var(--f-body);
+  font-size:.95rem;font-weight:600;
+  line-height:1.2;
+  transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn--honey{background:var(--honey);color:var(--on-honey)}
+.btn--honey:hover{background:var(--honey-soft)}
+.btn--ghost{border-color:var(--hero-line);color:var(--hero-fg)}
+.btn--ghost:hover{border-color:var(--honey);background:rgba(244,240,227,.07)}
+.btn--ink{background:var(--hero-bg);color:var(--hero-fg)}
+.btn--ink:hover{background:#1C3025}
+.btn--line{border-color:var(--line);color:var(--fg)}
+.btn--line:hover{border-color:var(--fg);background:var(--surface)}
+
+/* ---------- thanh điều hướng ---------- */
+.nav{
+  position:fixed;inset:0 0 auto;z-index:60;
+  --nav-fg:var(--hero-fg);
+  --nav-line:var(--hero-line);
+  padding-top:calc(8px + env(safe-area-inset-top,0px));
+  transition:background .35s ease,border-color .35s ease,box-shadow .35s ease;
+  border-bottom:1px solid transparent;
+}
+.nav--solid{
+  background:var(--nav-solid);
+  -webkit-backdrop-filter:blur(16px) saturate(1.25);
+  backdrop-filter:blur(16px) saturate(1.25);
+  border-bottom-color:var(--line);
+  --nav-fg:var(--fg);
+  --nav-line:var(--line);
+  box-shadow:0 12px 30px -28px rgba(0,0,0,.5);
+}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--nav-fg);transition:color .35s ease;min-width:0}
+.brand__mark{width:27px;height:31px;flex:none;color:var(--honey)}
+.brand__text{
+  display:flex;flex-direction:column;gap:2px;
+  font-family:var(--f-display);font-weight:800;
+  font-size:.98rem;letter-spacing:.1em;line-height:1;
+}
+.brand__sub{font-family:var(--f-mono);font-weight:400;font-size:.56rem;letter-spacing:.22em;color:var(--hero-muted);transition:color .35s ease}
+.nav--solid .brand__sub{color:var(--fg-muted)}
+.nav__links{display:flex;align-items:center;gap:30px;font-size:.88rem;font-weight:500}
+.nav__links a{position:relative;color:var(--nav-fg);opacity:.82;padding-block:6px;transition:opacity .25s ease,color .35s ease}
+.nav__links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:var(--honey);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s ease;
+}
+.nav__links a:hover{opacity:1}
+.nav__links a:hover::after{transform:scaleX(1)}
+.nav__cta{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--nav-line);
+  border-radius:999px;
+  padding:9px 16px;
+  font-size:.84rem;font-weight:600;
+  color:var(--nav-fg);
+  transition:background .25s ease,border-color .25s ease,color .35s ease;
+  white-space:nowrap;
+}
+.nav__cta svg{width:16px;height:16px;color:var(--honey)}
+.nav__cta:hover{background:var(--honey);border-color:var(--honey);color:var(--on-honey)}
+.nav__cta:hover svg{color:var(--on-honey)}
+.nav__cta-num{font-variant-numeric:tabular-nums}
+@media (max-width:920px){.nav__links{display:none}}
+@media (max-width:560px){
+  .nav__cta-num{display:none}
+  .brand__sub{display:none}
+  .brand__text{font-size:.86rem;letter-spacing:.05em}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:var(--hero-fg);
+  background:
+    radial-gradient(1100px 560px at 78% 4%, rgba(227,160,60,.2), transparent 62%),
+    radial-gradient(800px 520px at 4% 96%, rgba(72,128,98,.18), transparent 66%),
+    linear-gradient(178deg,var(--hero-bg) 0%,var(--hero-bg-2) 100%);
+  padding-top:calc(104px + env(safe-area-inset-top,0px));
+  isolation:isolate;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(244,240,227,.12) 1px,transparent 1px);
+  background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(120% 82% at 50% 24%,#000 0%,transparent 72%);
+  mask-image:radial-gradient(120% 82% at 50% 24%,#000 0%,transparent 72%);
+  opacity:.55;
+}
+.hero__motes{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none}
+.hero__grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);
+  gap:clamp(30px,5vw,70px);
+  align-items:center;
+  padding-block:clamp(26px,4vw,54px) clamp(34px,5vw,64px);
+}
+.hero__copy{min-width:0}
+.hero .eyebrow{color:var(--hero-muted);margin-bottom:22px}
+.hero__h1{
+  font-family:var(--f-display);
+  font-weight:800;
+  font-size:clamp(2.85rem,7vw,5.9rem);
+  line-height:.99;
+  letter-spacing:-.032em;
+  color:var(--hero-fg);
+  text-wrap:balance;
+}
+.hero__h1 em{
+  display:block;
+  font-family:var(--f-serif);
+  font-style:italic;
+  font-weight:400;
+  font-size:.93em;
+  line-height:1.03;
+  letter-spacing:-.02em;
+  color:var(--honey-soft);
+  margin-top:.04em;
+}
+.hero__lede{
+  margin-top:26px;
+  max-width:46ch;
+  font-size:clamp(1rem,1.35vw,1.1rem);
+  line-height:1.72;
+  font-weight:300;
+  color:rgba(244,240,227,.78);
+}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .btn--honey{min-width:212px}
+.hero__note{
+  display:flex;align-items:center;gap:9px;
+  margin-top:22px;
+  font-family:var(--f-mono);
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(244,240,227,.62);
+}
+.hero__note .dot{width:5px;height:5px;border-radius:50%;background:var(--honey);flex:none}
+
+.hero__media{position:relative;min-width:0}
+.hero__media .media{position:relative;z-index:1}
+.hero__media .media__frame{aspect-ratio:4/5;box-shadow:var(--shadow)}
+.hero__media::before{
+  content:"";position:absolute;inset:-13px;
+  border:1px solid rgba(240,180,85,.34);
+  pointer-events:none;
+  z-index:0;
+}
+.hero__media::after{
+  content:"";position:absolute;inset:-13px auto auto -13px;
+  width:34px;height:34px;
+  border-top:1px solid rgba(240,180,85,.85);
+  border-left:1px solid rgba(240,180,85,.85);
+  pointer-events:none;
+  z-index:0;
+}
+.seal{
+  position:absolute;left:-38px;bottom:36px;z-index:2;
+  width:104px;height:104px;
+  color:var(--honey);
+  background:var(--hero-bg);
+  border:1px solid rgba(240,180,85,.4);
+  border-radius:50%;
+  animation:spin 46s linear infinite;
+  filter:drop-shadow(0 18px 24px rgba(0,0,0,.35));
+}
+.seal__text{
+  font-family:var(--f-mono);
+  font-size:7.6px;
+  letter-spacing:.18em;
+  fill:var(--hero-fg);
+  text-transform:uppercase;
+}
+.seal__center{fill:var(--honey)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.seal{animation:none}}
+
+@media (max-width:940px){
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .hero__media{order:2;max-width:520px;width:100%;margin-inline:auto}
+  .hero__media .media__frame{aspect-ratio:4/5}
+  .seal{left:auto;right:-12px;top:-26px;bottom:auto;width:92px;height:92px}
+}
+@media (max-width:520px){
+  .seal{width:76px;height:76px;right:-8px;top:-20px}
+  .hero__media::before{inset:-10px}
+  .hero__media::after{inset:-10px auto auto -10px}
+}
+
+/* dải thông số dưới hero */
+.hero__specs{position:relative;z-index:2;border-top:1px solid var(--hero-line);margin-top:6px}
+.specs{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+  padding-block:24px;
+}
+.spec{padding-inline:22px;border-left:1px solid var(--hero-line)}
+.spec:first-child{border-left:0;padding-left:0}
+.spec__v{
+  display:block;
+  font-family:var(--f-display);font-weight:700;
+  font-size:clamp(1.15rem,2vw,1.55rem);
+  line-height:1.1;letter-spacing:-.02em;
+  color:var(--hero-fg);
+  font-variant-numeric:tabular-nums;
+}
+.spec__k{
+  display:block;margin-top:7px;
+  font-family:var(--f-mono);font-size:.63rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--hero-muted);
+}
+@media (max-width:720px){
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}
+  .spec{padding-inline:16px}
+  .spec:nth-child(odd){border-left:0;padding-left:0}
+  .spec:nth-child(3),.spec:nth-child(4){padding-top:20px;border-top:1px solid var(--hero-line)}
+  .spec:nth-child(3){border-left:0}
+}
+@media (max-width:420px){
+  .specs{grid-template-columns:1fr;row-gap:0}
+  .spec{padding:16px 0;border-left:0;border-top:1px solid var(--hero-line)}
+  .spec:first-child{border-top:0}
+  .spec:nth-child(3),.spec:nth-child(4){padding-top:16px}
+}
+
+/* ---------- khung media dùng chung ---------- */
+.media{display:block;min-width:0}
+.media__frame{
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:4/5;
+  border:1px solid var(--line);
+  border-radius:2px;
+  background:var(--surface);
+}
+.hero .media__frame,.band--dark .media__frame{border-color:var(--hero-line);background:var(--hero-bg-2)}
+.media__layer{position:absolute;inset:0;z-index:1}
+.media__layer img,.media__layer video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.media__ph{
+  position:absolute;inset:0;z-index:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;
+  text-align:center;padding:18px;
+  color:var(--fg-muted);
+  background:
+    radial-gradient(120% 100% at 22% 8%, rgba(227,160,60,.16), transparent 58%),
+    linear-gradient(160deg,var(--bg-alt),var(--surface));
+  transition:opacity .5s ease;
+}
+.hero .media__ph,.band--dark .media__ph{
+  color:var(--hero-muted);
+  background:
+    radial-gradient(120% 100% at 24% 8%, rgba(240,180,85,.22), transparent 60%),
+    radial-gradient(90% 80% at 82% 100%, rgba(63,110,84,.3), transparent 62%),
+    linear-gradient(160deg,var(--hero-bg-2),var(--hero-bg));
+}
+.media__ph::after{
+  content:"";position:absolute;inset:11px;
+  border:1px dashed var(--ph-line);
+  border-radius:2px;
+  opacity:.75;pointer-events:none;
+}
+.media__hex{width:38px;height:42px;color:var(--honey);opacity:.95}
+.media__kicker{
+  font-family:var(--f-mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--fg-faint);
+}
+.hero .media__kicker,.band--dark .media__kicker{color:rgba(244,240,227,.62)}
+.media__path{
+  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.06em;
+  color:var(--fg-faint);opacity:.72;
+  word-break:break-all;max-width:24ch;
+}
+.hero .media__path,.band--dark .media__path{color:rgba(244,240,227,.42)}
+.media__play{
+  position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%) scale(.94);
+  width:64px;height:64px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--honey);color:var(--on-honey);
+  opacity:0;pointer-events:none;
+  transition:opacity .3s ease,transform .3s ease;
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.6);
+}
+.media__play svg{width:24px;height:24px;margin-left:3px}
+.media.has-video{cursor:pointer}
+.media.has-video .media__play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.media.has-video:hover .media__play{transform:translate(-50%,-50%) scale(1.07)}
+.media.has-media .media__ph{opacity:0;pointer-events:none}
+.media.has-media.has-video .media__layer{background:rgba(0,0,0,.12)}
+.media--zoom.has-media{cursor:zoom-in}
+.media--zoom.has-media:hover .media__layer img{transform:scale(1.045)}
+.media__cap{
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  margin-top:12px;
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--fg-muted);
+}
+.hero .media__cap,.band--dark .media__cap{color:var(--hero-muted)}
+.media__cap svg{width:14px;height:14px;flex:none;color:var(--honey)}
+.media--hero .media__frame{aspect-ratio:4/5}
+.media--card .media__frame{aspect-ratio:4/5}
+.media--film .media__frame{aspect-ratio:16/9}
+.media--wide .media__frame{aspect-ratio:21/9}
+@media (max-width:720px){.media--wide .media__frame{aspect-ratio:16/9}}
+
+/* ---------- khối chữ ---------- */
+.section-head{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,26rem);
+  gap:24px 48px;align-items:end;
+  margin-bottom:clamp(34px,4.5vw,56px);
+}
+.section-head .eyebrow{margin-bottom:16px}
+.section-head__note{
+  font-family:var(--f-mono);font-size:.7rem;line-height:1.9;letter-spacing:.05em;
+  color:var(--fg-muted);
+  max-width:34ch;
+  justify-self:end;text-align:right;
+}
+.band--dark .section-head__note{color:var(--hero-muted)}
+.band--dark .eyebrow{color:var(--hero-muted)}
+@media (max-width:820px){
+  .section-head{grid-template-columns:1fr}
+  .section-head__note{justify-self:start;text-align:left;max-width:44ch}
+}
+
+/* ---------- manifesto ---------- */
+.manifesto{
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);
+  gap:clamp(36px,6vw,88px);align-items:start;
+}
+.manifesto__copy{min-width:0}
+.manifesto__copy .h2{margin-bottom:26px}
+.manifesto__copy p+p{margin-top:16px}
+.manifesto__copy p{max-width:60ch;color:var(--fg-muted)}
+.facts{
+  margin:0;border-top:1px solid var(--line);
+  padding-top:2px;
+}
+.fact{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:baseline;
+  padding-block:14px;border-bottom:1px solid var(--line);
+}
+.fact__k{
+  font-family:var(--f-mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--fg-faint);
+}
+.fact__v{
+  font-size:.86rem;font-weight:500;color:var(--fg);
+  text-align:right;font-variant-numeric:tabular-nums;min-width:0;
+}
+@media (max-width:860px){
+  .manifesto{grid-template-columns:1fr;gap:38px}
+}
+
+/* ---------- ticker ---------- */
+.ticker{
+  overflow:hidden;
+  background:var(--hero-bg);
+  color:var(--hero-fg);
+  border-block:1px solid var(--hero-line);
+}
+.ticker__track{display:flex;width:max-content;animation:marquee 42s linear infinite;padding-block:13px}
+.ticker__group{display:flex;align-items:center}
+.ticker span{
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
+  white-space:nowrap;padding-inline:16px;
+  color:rgba(244,240,227,.72);
+}
+.ticker .ticker__dot{color:var(--honey);font-size:.55rem;letter-spacing:0}
+.ticker:hover .ticker__track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){
+  .ticker__track{animation:none}
+}
+
+/* ---------- câu chuyện ---------- */
+.story{
+  display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+  gap:clamp(30px,5.5vw,80px);align-items:center;
+}
+.story .media__frame{aspect-ratio:4/5}
+.story__copy{min-width:0}
+.story__copy .h2{margin-bottom:24px}
+.story__copy p{max-width:56ch;color:var(--fg-muted)}
+.story__copy p+p{margin-top:15px}
+.steps{margin-top:32px;border-top:1px solid var(--line)}
+.steps li{
+  display:grid;grid-template-columns:34px minmax(0,1fr);gap:16px;align-items:baseline;
+  padding-block:14px;border-bottom:1px solid var(--line);
+}
+.steps__n{
+  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;color:var(--honey-ink);
+}
+.steps__t{font-size:.92rem;font-weight:500}
+@media (max-width:860px){
+  .story{grid-template-columns:1fr}
+  .story .media{order:-1;max-width:520px}
+  .story .media__frame{aspect-ratio:4/5}
+}
+
+/* ---------- bộ sưu tập ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3vw,38px)}
+.card{min-width:0;display:flex;flex-direction:column}
+.card .media__frame{aspect-ratio:4/5}
+.card__body{padding-top:18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card__head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card__name{
+  font-family:var(--f-display);font-weight:700;
+  font-size:1.22rem;letter-spacing:-.02em;line-height:1.15;
+}
+.card__latin{
+  font-family:var(--f-serif);font-style:italic;font-size:.86rem;
+  color:var(--honey-ink);
+}
+.card__desc{font-size:.92rem;color:var(--fg-muted);line-height:1.65;max-width:34ch}
+.card__meta{
+  display:flex;flex-wrap:wrap;gap:6px 18px;
+  font-family:var(--f-mono);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--fg-faint);
+  padding-top:2px;
+}
+.card__link{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:auto;padding-top:14px;
+  font-size:.88rem;font-weight:600;
+  border-top:1px solid var(--line);
+  transition:color .25s ease;
+}
+.card__link svg{width:16px;height:16px;transition:transform .3s ease;color:var(--honey-ink)}
+.card__link:hover{color:var(--honey-ink)}
+.card__link:hover svg{transform:translateX(4px)}
+@media (max-width:880px){
+  .cards{grid-template-columns:1fr;gap:44px;max-width:480px}
+}
+
+/* ---------- thước phim ---------- */
+.films{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.4vw,30px)}
+.films > .media:first-child{grid-column:1/-1}
+.films > .media{min-width:0}
+.films .media__cap{font-size:.66rem}
+.film__num{color:var(--honey);margin-right:10px}
+@media (max-width:720px){
+  .films{grid-template-columns:1fr}
+  .films > .media:first-child{grid-column:auto}
+}
+
+/* ---------- thư viện ảnh ---------- */
+.gallery{columns:3 220px;column-gap:clamp(14px,2vw,26px)}
+.gallery .media{margin-bottom:clamp(14px,2vw,26px);break-inside:avoid}
+.gallery .media__frame{aspect-ratio:4/5}
+.gallery .g-wide .media__frame{aspect-ratio:4/3}
+.gallery .g-square .media__frame{aspect-ratio:1/1}
+.gallery .media__cap{font-size:.63rem}
+
+/* ---------- trích dẫn ---------- */
+.quote{max-width:900px;margin-inline:auto;text-align:center}
+.quote blockquote p{
+  font-family:var(--f-serif);font-style:italic;
+  font-size:clamp(1.45rem,3.4vw,2.4rem);
+  line-height:1.35;letter-spacing:-.01em;
+  text-wrap:balance;
+}
+.quote__cite{
+  margin-top:24px;
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--fg-muted);
+}
+
+/* ---------- đặt hàng ---------- */
+.band--honey .eyebrow{color:rgba(25,18,4,.72)}
+.band--honey .eyebrow::before{background:var(--on-honey)}
+.order{
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(34px,5vw,72px);align-items:center;
+}
+.order__copy{min-width:0}
+.order__copy .h2{margin-bottom:22px;color:var(--on-honey)}
+.order__copy p{max-width:48ch;color:rgba(25,18,4,.78)}
+.order__hours{
+  display:flex;align-items:center;gap:10px;
+  margin-top:22px;
+  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(25,18,4,.72);
+}
+.order__hours::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--on-honey);flex:none}
+.order__card{
+  background:rgba(255,250,238,.55);
+  border:1px solid rgba(25,18,4,.16);
+  border-radius:2px;
+  padding:clamp(24px,3.4vw,34px);
+  display:flex;flex-direction:column;gap:14px;
+  min-width:0;
+}
+.order__label{
+  font-family:var(--f-mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(25,18,4,.65);
+}
+.order__number{
+  font-family:var(--f-display);font-weight:800;
+  font-size:clamp(1.9rem,4.4vw,2.9rem);
+  line-height:1.05;letter-spacing:-.03em;
+  color:var(--on-honey);
+  font-variant-numeric:tabular-nums;
+  word-break:break-word;
+}
+.order__number:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.copy{
+  align-self:flex-start;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 13px;
+  border:1px solid rgba(25,18,4,.3);
+  border-radius:2px;
+  font-family:var(--f-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--on-honey);
+  transition:background .25s ease,border-color .25s ease;
+}
+.copy svg{width:14px;height:14px}
+.copy:hover{background:rgba(25,18,4,.08);border-color:rgba(25,18,4,.55)}
+.order__card .btn{width:100%;margin-top:4px}
+.order__small{
+  font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;
+  color:rgba(25,18,4,.6);text-align:center;
+}
+@media (max-width:860px){
+  .order{grid-template-columns:1fr}
+}
+
+/* ---------- footer ---------- */
+.footer{
+  background:var(--hero-bg);color:var(--hero-fg);
+  padding-block:clamp(46px,6vw,72px) 28px;
+  border-top:1px solid var(--hero-line);
+}
+.footer__grid{
+  display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,.72fr));
+  gap:34px 32px;
+}
+.footer__brand .brand{color:var(--hero-fg);margin-bottom:14px}
+.footer__brand p{max-width:30ch;font-size:.88rem;line-height:1.7;color:var(--hero-muted)}
+.footer__h{
+  font-family:var(--f-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(244,240,227,.45);margin-bottom:14px;
+}
+.footer__col{display:flex;flex-direction:column;gap:9px;font-size:.88rem;min-width:0}
+.footer__col a,.footer__col p{color:var(--hero-muted);transition:color .25s ease;line-height:1.55}
+.footer__col a:hover{color:var(--honey-soft)}
+.footer__bottom{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;
+  margin-top:clamp(34px,4.5vw,52px);
+  padding-top:20px;
+  border-top:1px solid var(--hero-line);
+  font-family:var(--f-mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;
+  color:rgba(244,240,227,.45);
+}
+@media (max-width:860px){
+  .footer__grid{grid-template-columns:1fr 1fr}
+  .footer__brand{grid-column:1/-1}
+}
+@media (max-width:420px){.footer__grid{grid-template-columns:1fr}}
+
+/* ---------- thanh liên hệ trên điện thoại ---------- */
+.mobilebar{
+  position:fixed;inset:auto 0 0;z-index:70;
+  display:none;
+  grid-template-columns:1fr 1fr;gap:10px;
+  padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));
+  background:var(--nav-solid);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  border-top:1px solid var(--line);
+}
+.mobilebar .btn{min-height:46px;font-size:.88rem;padding:10px 12px}
+@media (max-width:760px){
+  .mobilebar{display:grid}
+  body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+}
+
+/* ---------- reveal ---------- */
+.reveal{transition:opacity .85s cubic-bezier(.16,.84,.4,1),transform .85s cubic-bezier(.16,.84,.4,1);transition-delay:var(--d,0s)}
+.reveal.is-hidden{opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion: reduce){
+  .reveal{transition:none}
+  .reveal.is-hidden{opacity:1;transform:none}
+}
+
+/* ---------- lightbox ---------- */
+.lb{
+  position:fixed;inset:0;z-index:120;
+  display:grid;grid-template-rows:1fr auto;
+  place-items:center;
+  gap:14px;
+  padding:max(20px,env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));
+  background:rgba(7,11,9,.95);
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+}
+.lb__stage{
+  display:grid;place-items:center;
+  width:100%;height:100%;min-height:0;min-width:0;
+}
+.lb__stage img,.lb__stage video{
+  max-width:min(1080px,100%);
+  max-height:100%;
+  width:auto;height:auto;
+  border-radius:2px;
+  box-shadow:0 40px 90px -40px rgba(0,0,0,.9);
+}
+.lb__stage video{background:#000}
+.lb__cap{
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(244,240,227,.6);text-align:center;max-width:70ch;
+}
+.lb__close{
+  position:absolute;
+  top:calc(14px + env(safe-area-inset-top,0px));
+  right:calc(14px + env(safe-area-inset-right,0px));
+  width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;
+  border:1px solid rgba(244,240,227,.28);
+  color:#F4F0E3;
+  background:rgba(0,0,0,.35);
+  transition:background .25s ease,border-color .25s ease;
+  z-index:2;
+}
+.lb__close:hover{background:var(--honey);border-color:var(--honey);color:var(--on-honey)}
+.lb__close svg{width:20px;height:20px}
+</style>
+</head>
+<body>
+
+<!--
+  ============================================================
+  MẬT ONG THỦY SỸ — HƯỚNG DẪN NHANH (chỉ cần sửa 2 chỗ)
+  ============================================================
+  1) SỐ ĐIỆN THOẠI + FACEBOOK MESSENGER
+     Mở file này, kéo xuống phần <script> gần cuối trang,
+     sửa object "SHOP" (phoneText, phoneHref, messenger, zalo).
+
+  2) VIDEO VÀ ẢNH
+     Tạo thư mục "media" nằm cạnh file index.html và đặt tệp
+     đúng tên dưới đây. Trang tự nhận khi tải lại:
+       media/hero.mp4        video lớn ở đầu trang
+       media/hero.jpg        ảnh nền cho video đầu trang
+       media/story.jpg       ảnh câu chuyện
+       media/product-1.jpg   ảnh sản phẩm 1
+       media/product-2.jpg   ảnh sản phẩm 2
+       media/product-3.jpg   ảnh sản phẩm 3
+       media/video-1.jpg     ảnh nền video 1 (+ video-1.mp4)
+       media/video-2.jpg     ảnh nền video 2 (+ video-2.mp4)
+       media/video-3.jpg     ảnh nền video 3 (+ video-3.mp4)
+       media/gallery-1.jpg … media/gallery-6.jpg
+     Chưa có tệp nào thì khung vẫn hiện đẹp, không bị vỡ ảnh.
+
+  3) TÊN THƯƠNG HIỆU: tìm chữ MẬT ONG THỦY SỸ trong trang để đổi.
+  ============================================================
+-->
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="Mật ong Thủy Sỹ — về đầu trang">
+      <svg class="brand__mark" viewBox="0 0 32 36" aria-hidden="true">
+        <path d="M16 1.6 30 9.2v17.6L16 34.4 2 26.8V9.2L16 1.6Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M16 9.6 23.2 13.7v8.6L16 26.4 8.8 22.3v-8.6L16 9.6Z" fill="currentColor" opacity=".9"/>
+      </svg>
+      <span class="brand__text">
+        MẬT ONG THỦY SỸ
+        <span class="brand__sub">HƯƠNG SƠN · HÀ TĨNH</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Mục chính">
+      <a href="#cau-chuyen">Câu chuyện</a>
+      <a href="#bo-suu-tap">Bộ sưu tập</a>
+      <a href="#thuoc-phim">Thước phim</a>
+      <a href="#dat-hang">Đặt hàng</a>
+    </nav>
+    <a class="nav__cta" data-phone-link href="#dat-hang" aria-label="Gọi đặt hàng">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21.9 16.9v2.9a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.7 19.7 0 0 1 2 4.2 2 2 0 0 1 4.1 2h2.9a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z"/>
+      </svg>
+      <span class="nav__cta-label">Gọi</span>
+      <span class="nav__cta-num" data-phone-text>0901 234 567</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas class="hero__motes" id="motes" aria-hidden="true"></canvas>
+
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Mật ong nhà nuôi · Hương Sơn · Hà Tĩnh</p>
+        <h1 class="hero__h1" id="hero-title">
+          Nắng núi,
+          <em>đóng trong hũ.</em>
+        </h1>
+        <p class="hero__lede">
+          Mật ong nhà nuôi, khai thác thủ công ở vùng đồi núi Hương Sơn, Hà Tĩnh.
+          Quay ly tâm ngay trong ngày, rót nguyên chất, không pha đường.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--honey" data-phone-link href="#dat-hang">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21.9 16.9v2.9a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.7 19.7 0 0 1 2 4.2 2 2 0 0 1 4.1 2h2.9a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z"/>
+            </svg>
+            <span>Gọi <span data-phone-text>0901 234 567</span></span>
+          </a>
+          <a class="btn btn--ghost" data-messenger href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.1C6.03 2.1 2 6.06 2 11.02c0 2.68 1.25 5.02 3.5 6.6v3.4l3.26-1.8c.8.22 1.64.33 2.5.33 5.97 0 10-3.96 10-8.53S17.97 2.1 12 2.1Zm-1.63 11.3-2.6-2.75 2.43-2.56 2.02 1.64 2.4-1.98 2.62 2.75-2.43 2.56-2.03-1.64-2.4 1.98Z" fill-rule="evenodd" clip-rule="evenodd"/>
+            </svg>
+            Nhắn Messenger
+          </a>
+        </div>
+        <p class="hero__note"><span class="dot"></span>Giao hàng toàn quốc · Kiểm tra hàng trước khi thanh toán</p>
+      </div>
+
+      <div class="hero__media">
+        <figure class="media media--hero" data-video="media/hero.mp4" data-poster="media/hero.jpg" data-autoplay="true" data-caption="Rót mật buổi sáng">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Video 01</span>
+              <span class="media__path">media/hero.mp4</span>
+            </div>
+            <div class="media__layer"></div>
+            <span class="media__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12 8 5.2Z"/></svg>
+            </span>
+          </div>
+          <figcaption class="media__cap">
+            <span>Rót mật buổi sáng</span>
+            <span class="media__kicker">Hương Sơn, Hà Tĩnh</span>
+          </figcaption>
+        </figure>
+
+        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <path id="sealArc" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0" fill="none"/>
+          </defs>
+          <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/>
+          <text class="seal__text" textLength="281" lengthAdjust="spacing">
+            <textPath href="#sealArc" startOffset="0">MẬT ONG THỦY SỸ · HƯƠNG SƠN · HÀ TĨNH ·</textPath>
+          </text>
+          <path class="seal__center" d="M60 39.5 74.5 48v17L60 73.5 45.5 65V48L60 39.5Z" opacity=".92"/>
+          <circle cx="60" cy="55" r="9.5" fill="none" stroke="#0F1913" stroke-width="1.4" opacity=".55"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero__specs">
+      <div class="wrap specs">
+        <div class="spec"><span class="spec__v">Hương Sơn</span><span class="spec__k">Vùng khai thác</span></div>
+        <div class="spec"><span class="spec__v">&lt; 20%</span><span class="spec__k">Độ ẩm tự nhiên</span></div>
+        <div class="spec"><span class="spec__v">3 tháng</span><span class="spec__k">Mùa hoa tháng 3–6</span></div>
+        <div class="spec"><span class="spec__v">0%</span><span class="spec__k">Đường pha thêm</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MANIFESTO ================= -->
+  <section class="band band--paper" id="cau-chuyen" aria-labelledby="manifesto-title">
+    <div class="wrap manifesto">
+      <div class="manifesto__copy reveal">
+        <p class="eyebrow">Chuyện của mật</p>
+        <h2 class="h2" id="manifesto-title">Ba tháng hoa nở.<br>Một năm đợi.</h2>
+        <p>
+          Ở Hương Sơn, mùa hoa chỉ kéo dài từ tháng Ba đến tháng Sáu. Những cơn mưa đầu mùa
+          làm đồi sim sau núi bừng tím, keo và hoa vườn nở theo. Đàn ong nhà được đưa ra đồi
+          từ đầu mùa; đến cuối vụ, mỗi tổ chỉ cho vài lít mật.
+        </p>
+        <p>
+          Mật được quay ly tâm ngay trong ngày, giữ nguyên hương hoa và enzyme. Vì không lọc mịn
+          và không gia nhiệt, hũ mật có thể kết tinh tự nhiên theo thời gian. Đó là dấu hiệu
+          của mật thô thật.
+        </p>
+      </div>
+
+      <dl class="facts reveal" style="--d:.12s" aria-label="Thông tin mật ong">
+        <div class="fact"><dt class="fact__k">Vùng khai thác</dt><dd class="fact__v">Sơn Tây, Hương Sơn</dd></div>
+        <div class="fact"><dt class="fact__k">Địa hình</dt><dd class="fact__v">Đồi núi thấp</dd></div>
+        <div class="fact"><dt class="fact__k">Mùa hoa</dt><dd class="fact__v">Tháng 3 – 6</dd></div>
+        <div class="fact"><dt class="fact__k">Quay mật</dt><dd class="fact__v">Ly tâm, không gia nhiệt</dd></div>
+        <div class="fact"><dt class="fact__k">Độ ẩm</dt><dd class="fact__v">Dưới 20%</dd></div>
+        <div class="fact"><dt class="fact__k">Đóng gói</dt><dd class="fact__v">Thủy tinh 250 g / 500 g</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= TICKER ================= -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <div class="ticker__group">
+        <span>Mật ong nhà nuôi Hương Sơn</span><span class="ticker__dot">◆</span>
+        <span>Quay ly tâm trong ngày</span><span class="ticker__dot">◆</span>
+        <span>Sơn Tây · Hà Tĩnh</span><span class="ticker__dot">◆</span>
+        <span>Mùa hoa tháng 3–6</span><span class="ticker__dot">◆</span>
+        <span>Không pha đường</span><span class="ticker__dot">◆</span>
+        <span>Rót thủ công</span><span class="ticker__dot">◆</span>
+        <span>Không gia nhiệt</span><span class="ticker__dot">◆</span>
+      </div>
+      <div class="ticker__group">
+        <span>Mật ong nhà nuôi Hương Sơn</span><span class="ticker__dot">◆</span>
+        <span>Quay ly tâm trong ngày</span><span class="ticker__dot">◆</span>
+        <span>Sơn Tây · Hà Tĩnh</span><span class="ticker__dot">◆</span>
+        <span>Mùa hoa tháng 3–6</span><span class="ticker__dot">◆</span>
+        <span>Không pha đường</span><span class="ticker__dot">◆</span>
+        <span>Rót thủ công</span><span class="ticker__dot">◆</span>
+        <span>Không gia nhiệt</span><span class="ticker__dot">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CÂU CHUYỆN ================= -->
+  <section class="band band--alt" aria-labelledby="story-title">
+    <div class="wrap story">
+      <figure class="media media--zoom reveal" data-img="media/story.jpg" data-caption="Đồi sim sau mưa, Hương Sơn">
+        <div class="media__frame">
+          <div class="media__ph" aria-hidden="true">
+            <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+            <span class="media__kicker">Ảnh 01</span>
+            <span class="media__path">media/story.jpg</span>
+          </div>
+          <div class="media__layer"></div>
+        </div>
+        <figcaption class="media__cap">
+          <span>Đồi sim sau mưa, Hương Sơn</span>
+          <span class="media__kicker">Hương Sơn, Hà Tĩnh</span>
+        </figcaption>
+      </figure>
+
+      <div class="story__copy reveal" style="--d:.12s">
+        <p class="eyebrow">Từ đồi sim</p>
+        <h2 class="h2" id="story-title">Một hũ mật đi qua nhiều đôi tay.</h2>
+        <p>
+          Đàn ong nhà được đặt ở rìa đồi sim, cạnh đồi keo và một mạch nước nhỏ. Bố tôi
+          đến kiểm tra từng khung vào sáng sớm, khi đàn ong còn chậm và sương còn đọng trên lá.
+        </p>
+        <p>
+          Khi khung đã đầy và chín, mật được đưa về nhà, quay ngay trong ngày rồi rót vào hũ
+          thủy tinh. Mỗi hũ ghi mùa hoa và ngày quay ở mặt sau nhãn.
+        </p>
+        <ol class="steps">
+          <li><span class="steps__n">01</span><span class="steps__t">Đặt đàn ong ở rìa đồi sim và đồi keo</span></li>
+          <li><span class="steps__n">02</span><span class="steps__t">Quay ly tâm ngay trong ngày thu hoạch</span></li>
+          <li><span class="steps__n">03</span><span class="steps__t">Rót, dán nhãn và đóng hộp thủ công</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BỘ SƯU TẬP ================= -->
+  <section class="band band--paper" id="bo-suu-tap" aria-labelledby="collection-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Bộ sưu tập 2026</p>
+          <h2 class="h2" id="collection-title">Ba mùa hoa, ba sắc mật.</h2>
+        </div>
+        <p class="section-head__note">Giá và tồn kho cập nhật theo mùa. Nhắn tin để nhận báo giá hôm nay.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <figure class="media media--card media--zoom" data-img="media/product-1.jpg" data-caption="Mật ong vườn nhà">
+            <div class="media__frame">
+              <div class="media__ph" aria-hidden="true">
+                <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+                <span class="media__kicker">Ảnh sản phẩm 01</span>
+                <span class="media__path">media/product-1.jpg</span>
+              </div>
+              <div class="media__layer"></div>
+            </div>
+          </figure>
+          <div class="card__body">
+            <div class="card__head">
+              <h3 class="card__name">Mật ong vườn nhà</h3>
+              <span class="card__latin">Hoa vườn</span>
+            </div>
+            <p class="card__desc">Đàn ong nhà lấy hoa vườn và đồi quanh nhà. Vàng sẫm, vị ngọt dịu, hương hoa nhẹ.</p>
+            <div class="card__meta"><span>250 g · 500 g</span><span>Vụ 3–6</span></div>
+            <a class="card__link" data-messenger href="#" target="_blank" rel="noopener">
+              Nhắn hỏi giá
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--d:.08s">
+          <figure class="media media--card media--zoom" data-img="media/product-2.jpg" data-caption="Mật ong hoa sim">
+            <div class="media__frame">
+              <div class="media__ph" aria-hidden="true">
+                <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+                <span class="media__kicker">Ảnh sản phẩm 02</span>
+                <span class="media__path">media/product-2.jpg</span>
+              </div>
+              <div class="media__layer"></div>
+            </div>
+          </figure>
+          <div class="card__body">
+            <div class="card__head">
+              <h3 class="card__name">Mật ong hoa sim</h3>
+              <span class="card__latin">Hoa sim</span>
+            </div>
+            <p class="card__desc">Hoa sim tím trên đồi sau mưa. Vị thanh, hương hoa nhẹ, màu hổ phách.</p>
+            <div class="card__meta"><span>250 g · 500 g</span><span>Vụ 4–6</span></div>
+            <a class="card__link" data-messenger href="#" target="_blank" rel="noopener">
+              Nhắn hỏi giá
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--d:.16s">
+          <figure class="media media--card media--zoom" data-img="media/product-3.jpg" data-caption="Mật ong hoa keo">
+            <div class="media__frame">
+              <div class="media__ph" aria-hidden="true">
+                <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+                <span class="media__kicker">Ảnh sản phẩm 03</span>
+                <span class="media__path">media/product-3.jpg</span>
+              </div>
+              <div class="media__layer"></div>
+            </div>
+          </figure>
+          <div class="card__body">
+            <div class="card__head">
+              <h3 class="card__name">Mật ong hoa keo</h3>
+              <span class="card__latin">Hoa keo</span>
+            </div>
+            <p class="card__desc">Mùa keo nở ngắn trên đồi. Mật vàng sáng, vị dịu, hậu vị tươi.</p>
+            <div class="card__meta"><span>250 g · 500 g</span><span>Vụ 5–6</span></div>
+            <a class="card__link" data-messenger href="#" target="_blank" rel="noopener">
+              Nhắn hỏi giá
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THƯỚC PHIM ================= -->
+  <section class="band band--dark" id="thuoc-phim" aria-labelledby="films-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Thước phim</p>
+          <h2 class="h2" id="films-title">Một ngày ở trại ong.</h2>
+        </div>
+        <p class="section-head__note">Ba thước phim ngắn, quay vào mùa hoa.</p>
+      </div>
+
+      <div class="films">
+        <figure class="media media--film media--wide" data-video="media/video-1.mp4" data-poster="media/video-1.jpg" data-caption="01 · Thu hoạch lúc bình minh">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung video 01</span>
+              <span class="media__path">media/video-1.mp4</span>
+            </div>
+            <div class="media__layer"></div>
+            <span class="media__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12 8 5.2Z"/></svg></span>
+          </div>
+          <figcaption class="media__cap"><span><span class="film__num">01</span>Thu hoạch lúc bình minh</span><span class="media__kicker">2:14</span></figcaption>
+        </figure>
+
+        <figure class="media media--film" data-video="media/video-2.mp4" data-poster="media/video-2.jpg" data-caption="02 · Quay mật lạnh">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung video 02</span>
+              <span class="media__path">media/video-2.mp4</span>
+            </div>
+            <div class="media__layer"></div>
+            <span class="media__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12 8 5.2Z"/></svg></span>
+          </div>
+          <figcaption class="media__cap"><span><span class="film__num">02</span>Quay mật lạnh</span><span class="media__kicker">1:36</span></figcaption>
+        </figure>
+
+        <figure class="media media--film" data-video="media/video-3.mp4" data-poster="media/video-3.jpg" data-caption="03 · Rót vào hũ thủy tinh">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung video 03</span>
+              <span class="media__path">media/video-3.mp4</span>
+            </div>
+            <div class="media__layer"></div>
+            <span class="media__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12 8 5.2Z"/></svg></span>
+          </div>
+          <figcaption class="media__cap"><span><span class="film__num">03</span>Rót vào hũ thủy tinh</span><span class="media__kicker">1:08</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THƯ VIỆN ẢNH ================= -->
+  <section class="band band--paper" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Khoảnh khắc</p>
+          <h2 class="h2" id="gallery-title">Đồng cỏ, tổ ong và nắng.</h2>
+        </div>
+        <p class="section-head__note">Ảnh chụp tại trại ong, mùa hoa tháng Ba đến tháng Sáu. Bấm vào ảnh để xem lớn.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="media media--zoom g-wide reveal" data-img="media/gallery-1.jpg" data-caption="Đồi sim sau mưa">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung ảnh 01</span>
+              <span class="media__path">media/gallery-1.jpg</span>
+            </div>
+            <div class="media__layer"></div>
+          </div>
+          <figcaption class="media__cap"><span>Đồi sim sau mưa</span></figcaption>
+        </figure>
+
+        <figure class="media media--zoom g-square reveal" data-img="media/gallery-2.jpg" data-caption="Khung tổ ong buổi sáng">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung ảnh 02</span>
+              <span class="media__path">media/gallery-2.jpg</span>
+            </div>
+            <div class="media__layer"></div>
+          </div>
+          <figcaption class="media__cap"><span>Khung tổ ong buổi sáng</span></figcaption>
+        </figure>
+
+        <figure class="media media--zoom reveal" data-img="media/gallery-3.jpg" data-caption="Giọt mật đầu mùa">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung ảnh 03</span>
+              <span class="media__path">media/gallery-3.jpg</span>
+            </div>
+            <div class="media__layer"></div>
+          </div>
+          <figcaption class="media__cap"><span>Giọt mật đầu mùa</span></figcaption>
+        </figure>
+
+        <figure class="media media--zoom reveal" data-img="media/gallery-4.jpg" data-caption="Hũ thủy tinh và nhãn dán tay">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung ảnh 04</span>
+              <span class="media__path">media/gallery-4.jpg</span>
+            </div>
+            <div class="media__layer"></div>
+          </div>
+          <figcaption class="media__cap"><span>Hũ thủy tinh và nhãn dán tay</span></figcaption>
+        </figure>
+
+        <figure class="media media--zoom g-wide reveal" data-img="media/gallery-5.jpg" data-caption="Bình minh sau núi">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung ảnh 05</span>
+              <span class="media__path">media/gallery-5.jpg</span>
+            </div>
+            <div class="media__layer"></div>
+          </div>
+          <figcaption class="media__cap"><span>Bình minh sau núi</span></figcaption>
+        </figure>
+
+        <figure class="media media--zoom g-square reveal" data-img="media/gallery-6.jpg" data-caption="Bàn rót mật">
+          <div class="media__frame">
+            <div class="media__ph" aria-hidden="true">
+              <svg class="media__hex" viewBox="0 0 40 44"><path d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21L20 1.5Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M20 10.2 31 16.6v12.8L20 35.8 9 29.4V16.6L20 10.2Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+              <span class="media__kicker">Khung ảnh 06</span>
+              <span class="media__path">media/gallery-6.jpg</span>
+            </div>
+            <div class="media__layer"></div>
+          </div>
+          <figcaption class="media__cap"><span>Bàn rót mật</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRÍCH DẪN ================= -->
+  <section class="band band--alt band--tight">
+    <div class="wrap quote reveal">
+      <blockquote>
+        <p>“Mật ong thật không cần nói nhiều. Chỉ cần một thìa.”</p>
+      </blockquote>
+      <p class="quote__cite">Ghi chú từ trại ong · Hương Sơn, Hà Tĩnh</p>
+    </div>
+  </section>
+
+  <!-- ================= ĐẶT HÀNG ================= -->
+  <section class="band band--honey" id="dat-hang" aria-labelledby="order-title">
+    <div class="wrap order">
+      <div class="order__copy">
+        <p class="eyebrow">Đặt hàng</p>
+        <h2 class="h2" id="order-title">Đặt một hũ cho mùa này.</h2>
+        <p>
+          Nhắn tin để được tư vấn loại mật phù hợp, hoặc gọi trực tiếp. Nội thành giao trong
+          1–2 ngày, toàn quốc 2–5 ngày.
+        </p>
+        <p class="order__hours">8:00 – 20:00, mỗi ngày</p>
+      </div>
+
+      <div class="order__card">
+        <p class="order__label">Gọi đặt hàng</p>
+        <a class="order__number" data-phone-link href="#" data-phone-text>0901 234 567</a>
+        <button class="copy" type="button" data-copy-phone aria-label="Sao chép số điện thoại">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 5H6a2 2 0 0 0-2 2v9"/>
+          </svg>
+          <span data-copy-label>Sao chép số</span>
+        </button>
+        <a class="btn btn--ink" data-messenger href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.1C6.03 2.1 2 6.06 2 11.02c0 2.68 1.25 5.02 3.5 6.6v3.4l3.26-1.8c.8.22 1.64.33 2.5.33 5.97 0 10-3.96 10-8.53S17.97 2.1 12 2.1Zm-1.63 11.3-2.6-2.75 2.43-2.56 2.02 1.64 2.4-1.98 2.62 2.75-2.43 2.56-2.03-1.64-2.4 1.98Z" fill-rule="evenodd" clip-rule="evenodd"/>
+          </svg>
+          Nhắn tin qua Facebook
+        </a>
+        <p class="order__small">Thường trả lời trong 15 phút</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <div class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 36" aria-hidden="true">
+          <path d="M16 1.6 30 9.2v17.6L16 34.4 2 26.8V9.2L16 1.6Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M16 9.6 23.2 13.7v8.6L16 26.4 8.8 22.3v-8.6L16 9.6Z" fill="currentColor" opacity=".9"/>
+        </svg>
+        <span class="brand__text">MẬT ONG THỦY SỸ<span class="brand__sub">HƯƠNG SƠN · HÀ TĨNH</span></span>
+      </div>
+      <p>Mật ong nhà nuôi từ Sơn Tây, Hương Sơn, Hà Tĩnh. Quay ly tâm, rót thủ công, không pha đường.</p>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__h">Liên hệ</p>
+      <a data-phone-link href="#"><span data-phone-text>0901 234 567</span></a>
+      <a data-messenger href="#" target="_blank" rel="noopener">Facebook Messenger</a>
+      <a data-zalo href="#" target="_blank" rel="noopener">Zalo</a>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__h">Địa chỉ</p>
+      <p>Sơn Tây, Hương Sơn<br>Hà Tĩnh, Việt Nam<br>Giao hàng toàn quốc</p>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__h">Đặt hàng</p>
+      <a href="#bo-suu-tap">Bộ sưu tập</a>
+      <a href="#thuoc-phim">Thước phim</a>
+      <a href="#dat-hang">Gọi đặt hàng</a>
+    </div>
+  </div>
+
+  <div class="wrap footer__bottom">
+    <span>© <span id="year">2026</span> Mật ong Thủy Sỹ</span>
+    <span>Mật ong nhà nuôi · Hương Sơn, Hà Tĩnh</span>
+  </div>
+</footer>
+
+<!-- thanh gọi / nhắn trên điện thoại -->
+<div class="mobilebar" aria-label="Liên hệ nhanh">
+  <a class="btn btn--honey" data-phone-link href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21.9 16.9v2.9a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.7 19.7 0 0 1 2 4.2 2 2 0 0 1 4.1 2h2.9a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z"/>
+    </svg>
+    Gọi ngay
+  </a>
+  <a class="btn btn--ink" data-messenger href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.1C6.03 2.1 2 6.06 2 11.02c0 2.68 1.25 5.02 3.5 6.6v3.4l3.26-1.8c.8.22 1.64.33 2.5.33 5.97 0 10-3.96 10-8.53S17.97 2.1 12 2.1Zm-1.63 11.3-2.6-2.75 2.43-2.56 2.02 1.64 2.4-1.98 2.62 2.75-2.43 2.56-2.03-1.64-2.4 1.98Z" fill-rule="evenodd" clip-rule="evenodd"/>
+    </svg>
+    Messenger
+  </a>
+</div>
+
+<!-- lightbox -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh và video" hidden>
+  <button class="lb__close" type="button" aria-label="Đóng">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <div class="lb__stage"></div>
+  <p class="lb__cap" id="lb-cap"></p>
+</div>
+
+<script>
+/* ============================================================
+   CẤU HÌNH — SỬA DUY NHẤT PHẦN NÀY
+   ============================================================ */
+const SHOP = {
+  phoneText: "0901 234 567",              // số hiển thị trên trang
+  phoneHref: "tel:+84901234567",           // số dùng để gọi (giữ dạng +84…)
+  messenger: "https://m.me/matongthuysy",    // link Facebook Messenger của bạn
+  zalo: ""                                 // ví dụ "https://zalo.me/0901234567"; để trống sẽ ẩn
+};
+
+(function () {
+  "use strict";
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- liên hệ ---------- */
+  document.querySelectorAll("[data-phone-text]").forEach(function (el) {
+    el.textContent = SHOP.phoneText;
+  });
+  document.querySelectorAll("[data-phone-link]").forEach(function (el) {
+    el.setAttribute("href", SHOP.phoneHref);
+  });
+  document.querySelectorAll("[data-messenger]").forEach(function (el) {
+    el.setAttribute("href", SHOP.messenger);
+    el.setAttribute("target", "_blank");
+    el.setAttribute("rel", "noopener");
+  });
+  document.querySelectorAll("[data-zalo]").forEach(function (el) {
+    if (!SHOP.zalo) { el.remove(); return; }
+    el.setAttribute("href", SHOP.zalo);
+  });
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---------- sao chép số điện thoại ---------- */
+  document.querySelectorAll("[data-copy-phone]").forEach(function (btn) {
+    const label = btn.querySelector("[data-copy-label]");
+    const original = label ? label.textContent : "";
+    btn.addEventListener("click", function () {
+      const done = function () {
+        if (!label) return;
+        label.textContent = "Đã sao chép";
+        setTimeout(function () { label.textContent = original; }, 1800);
+      };
+      const fallback = function () {
+        const target = document.querySelector(".order__number");
+        if (target) {
+          const range = document.createRange();
+          range.selectNodeContents(target);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        if (label) {
+          label.textContent = "Đã chọn số, nhấn Ctrl+C";
+          setTimeout(function () { label.textContent = original; }, 2400);
+        }
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(SHOP.phoneText).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+
+  /* ---------- thanh điều hướng khi cuộn ---------- */
+  const nav = document.getElementById("nav");
+  const onScroll = function () {
+    if (!nav) return;
+    nav.classList.toggle("nav--solid", window.scrollY > 40);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* ---------- lightbox ---------- */
+  const lb = document.getElementById("lightbox");
+  const stage = lb ? lb.querySelector(".lb__stage") : null;
+  const lbCap = document.getElementById("lb-cap");
+  let lastFocus = null;
+
+  function openLightbox(fig) {
+    if (!lb || !stage) return;
+    const hasVideo = fig.dataset.video && fig.classList.contains("has-video");
+    const hasImage = fig.dataset.img && fig.classList.contains("has-media");
+    stage.replaceChildren();
+    if (hasVideo) {
+      const v = document.createElement("video");
+      v.src = fig.dataset.video;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute("playsinline", "");
+      stage.appendChild(v);
+    } else if (hasImage) {
+      const img = document.createElement("img");
+      img.src = fig.dataset.img;
+      img.alt = fig.dataset.caption || "";
+      stage.appendChild(img);
+    } else {
+      return;
+    }
+    if (lbCap) lbCap.textContent = fig.dataset.caption || "";
+    lastFocus = document.activeElement;
+    lb.hidden = false;
+    document.body.style.overflow = "hidden";
+    const closeBtn = lb.querySelector(".lb__close");
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    if (!lb || lb.hidden) return;
+    lb.hidden = true;
+    if (stage) stage.replaceChildren();
+    document.body.style.overflow = "";
+    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+  }
+
+  if (lb) {
+    lb.addEventListener("click", function (e) {
+      if (e.target === lb || e.target.closest(".lb__close")) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !lb.hidden) closeLightbox();
+    });
+  }
+
+  /* ---------- nạp media (ảnh / video) với khung chờ đẹp ---------- */
+  function enableOpen(fig) {
+    if (fig.dataset.bound === "1") return;
+    fig.dataset.bound = "1";
+    fig.tabIndex = 0;
+    fig.setAttribute("role", "button");
+    const base = fig.dataset.caption || "Xem media";
+    fig.setAttribute("aria-label", base);
+    fig.addEventListener("click", function () { openLightbox(fig); });
+    fig.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(fig);
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-img], [data-video]").forEach(function (fig) {
+    const frame = fig.querySelector(".media__frame");
+    const layer = fig.querySelector(".media__layer");
+    if (!frame || !layer) return;
+
+    const poster = fig.dataset.poster || fig.dataset.img;
+    if (poster) {
+      const img = new Image();
+      img.alt = "";
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.addEventListener("load", function () {
+        layer.appendChild(img);
+        fig.classList.add("has-media");
+        if (!fig.dataset.video) enableOpen(fig);
+      });
+      img.addEventListener("error", function () { /* giữ khung chờ */ });
+      img.src = poster;
+    }
+
+    if (fig.dataset.video) {
+      const probe = document.createElement("video");
+      probe.preload = "metadata";
+      probe.muted = true;
+      probe.addEventListener("loadedmetadata", function () {
+        fig.classList.add("has-video");
+        enableOpen(fig);
+        if (fig.dataset.autoplay === "true") {
+          const v = document.createElement("video");
+          v.src = fig.dataset.video;
+          v.muted = true;
+          v.loop = true;
+          v.autoplay = true;
+          v.playsInline = true;
+          v.setAttribute("aria-hidden", "true");
+          layer.appendChild(v);
+          fig.classList.add("has-media");
+          const playing = v.play();
+          if (playing && typeof playing.catch === "function") playing.catch(function () {});
+        }
+      }, { once: true });
+      probe.addEventListener("error", function () { /* giữ khung chờ */ });
+      probe.src = fig.dataset.video;
+    }
+  });
+
+  /* ---------- hiện dần khi cuộn ---------- */
+  const reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove("is-hidden");
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+
+    reveals.forEach(function (el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top > window.innerHeight * 1.02) {
+        el.classList.add("is-hidden");
+        io.observe(el);
+      }
+    });
+
+    /* lưới an toàn: không để nội dung bị ẩn quá lâu */
+    setTimeout(function () {
+      reveals.forEach(function (el) {
+        el.classList.remove("is-hidden");
+        io.unobserve(el);
+      });
+    }, 4000);
+  } else {
+    reveals.forEach(function (el) { el.classList.remove("is-hidden"); });
+  }
+
+  /* ---------- hạt phấn hoa trôi trong hero ---------- */
+  const canvas = document.getElementById("motes");
+  if (canvas && canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+    const hero = canvas.parentElement;
+    let W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let parts = [];
+    let pointerX = 0, pointerY = 0, targetX = 0, targetY = 0;
+    let raf = null, running = false, t0 = performance.now();
+
+    function makeParticle(anywhere) {
+      return {
+        x: Math.random() * W,
+        y: anywhere ? Math.random() * H : H + 12,
+        r: 0.6 + Math.random() * 2.1,
+        vy: -(0.08 + Math.random() * 0.32),
+        vx: (Math.random() - 0.5) * 0.14,
+        a: 0.12 + Math.random() * 0.45,
+        ph: Math.random() * Math.PI * 2
+      };
+    }
+
+    function resize() {
+      const rect = hero.getBoundingClientRect();
+      W = Math.max(1, Math.round(rect.width));
+      H = Math.max(1, Math.round(rect.height));
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      canvas.style.width = W + "px";
+      canvas.style.height = H + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.min(64, Math.round((W * H) / 24000));
+      parts = [];
+      for (let i = 0; i < count; i++) parts.push(makeParticle(true));
+    }
+
+    function draw(now) {
+      if (!running) return;
+      const t = (now - t0) / 1000;
+      ctx.clearRect(0, 0, W, H);
+      pointerX += (targetX - pointerX) * 0.05;
+      pointerY += (targetY - pointerY) * 0.05;
+
+      for (let i = 0; i < parts.length; i++) {
+        const p = parts[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < -14 || p.x < -20 || p.x > W + 20) {
+          parts[i] = makeParticle(false);
+          continue;
+        }
+        const depth = p.r / 2.7;
+        const alpha = p.a * (0.55 + 0.45 * Math.sin(t * 0.8 + p.ph));
+        ctx.globalAlpha = Math.max(0, alpha);
+        ctx.fillStyle = "#F3C476";
+        ctx.beginPath();
+        ctx.arc(
+          p.x + pointerX * 16 * depth,
+          p.y + pointerY * 10 * depth,
+          p.r,
+          0,
+          Math.PI * 2
+        );
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      raf = requestAnimationFrame(draw);
+    }
+
+    function start() {
+      if (reduceMotion || running) return;
+      resize();
+      running = true;
+      t0 = performance.now();
+      raf = requestAnimationFrame(draw);
+    }
+    function stop() {
+      running = false;
+      if (raf) cancelAnimationFrame(raf);
+      raf = null;
+    }
+
+    hero.addEventListener("pointermove", function (e) {
+      const rect = hero.getBoundingClientRect();
+      targetX = (e.clientX - rect.left) / rect.width - 0.5;
+      targetY = (e.clientY - rect.top) / rect.height - 0.5;
+    });
+    hero.addEventListener("pointerleave", function () {
+      targetX = 0; targetY = 0;
+    });
+
+    let resizeTimer = null;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (running) resize();
+      }, 180);
+    });
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    if (reduceMotion) {
+      resize();
+      for (let i = 0; i < parts.length; i++) {
+        const p = parts[i];
+        ctx.globalAlpha = p.a * 0.6;
+        ctx.fillStyle = "#F3C476";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    } else {
+      start();
+    }
+  }
+})();
+</script>
+</body>
+</html>
